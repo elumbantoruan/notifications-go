@@ -3,7 +3,14 @@
 A set of framework to send SMS message via AWS SNS.  The component 
 includes AWS Lambda (go), AWS SNS, and MongoDB for storage
 
-###Setup:
+### Notes:
+1. handler.go contains Handler function which is the entry point 
+for AWS Lambda
+2. The lambda will be invoked by CloudWatch scheduler
+http://docs.aws.amazon.com/AmazonCloudWatch/latest/events/RunLambdaSchedule.html
+
+
+### Setup:
 
 1. AWS Lambda go shim
    https://github.com/eawsy/aws-lambda-go-shim
@@ -18,7 +25,7 @@ includes AWS Lambda (go), AWS SNS, and MongoDB for storage
    https://github.com/google/uuid
    
    
-###References:
+### References:
 
 1. MongoDB examples:
     1. https://gist.github.com/border/3489566
